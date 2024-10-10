@@ -1,0 +1,211 @@
+body{
+    background-color: white;
+    font-size: medium;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+main{
+    margin: 20px;
+}
+
+.h1{
+    text-align: left;
+    font-size: 20pt;
+    font-family: sans-serif;
+}
+
+.h2{
+    font-style: normal;
+    font-size: 18pt;
+    font-family: sans-serif;
+}
+
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-size: 20pt;
+    
+}
+
+/*(YouTube, 2023)*/
+.navbar {
+    background-color: pink; /* Navbar background color */
+    overflow: hidden; /* Clear floats */
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.navbar li {
+    float: left; /* Float left for horizontal layout */
+    width: auto; /* Auto width for each list item */
+}
+
+.navbar a {
+    color: black; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    padding: 15px; /* Padding for links */
+    display: block; /* Block display for easy clicking */
+    text-align: center; /* Center align text */
+}
+
+.navbar a:hover {
+    background-color: white; /* Change background on hover */
+}
+
+
+.form-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 70px auto; /* Add margin to separate from floating nav */
+    max-width: 500px;
+    background-color: #ffffff; /* White background for the form */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for form */
+    border-radius: 8px; /* Rounded corners for the form */
+}
+
+/* Form Fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border 0.3s; /* Transition for border color */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border: 1px solid #4A90E2; /* Change border color on focus */
+}
+
+button {
+    background-color: rgb(236, 114, 134); /* pink for the button */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+
+}
+
+button:hover {
+    background-color: rgb(233, 64, 92); /* Darker green on hover */
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.image-container img {
+    width: 30%; /* Adjust percentage for smaller size */
+    margin: 0 5px; /* Space between images */
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); /* Shadow for images */
+}
+
+
+
+iframe {
+    width: 85%;
+    height: 400px;
+    border: none;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.iframe-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #eaeaea; /* Light background */
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+@media (max-width: 768px) {
+    
+    .navbar li {
+        float: none; /* Remove float to stack items */
+        width: 100%; /* Full width for mobile */
+    }
+
+
+    /* Adjust form container */
+    .form-container {
+        width: 90%;
+        margin: 80px auto;
+        padding: 15px;
+        max-width: 95%;
+        padding: 12px;
+        box-shadow: none; /* Remove shadow */
+    }
+
+    /* Adjust form fields */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        padding: 8px;
+    }
+
+    /* Adjust button size */
+    button {
+        padding: 8px;
+    }
+    
+
+    /* Images: Stack side-by-side and fit to screen */
+    .image-container img {
+        width: 48%; /* 2 images per row */
+        margin: 5px;
+    }
+
+    /* Iframe adjustment for responsiveness */
+    .iframe-container {
+        padding-bottom: 75%; /* Adjust aspect ratio */
+    }
+
+    /* Body: Prevent horizontal scrolling */
+    body {
+        overflow-x: hidden;
+    }
+}
+
+/* Smallest Screen Adjustments */
+@media (max-width: 480px) {
+    .image-container img {
+        width: 100%; /* Full width on smallest screens */
+    }
+
+    /* Smaller iframe height */
+    .iframe-container {
+        padding-bottom: 100%; /* 1:1 aspect ratio */
+    }
+
+   
+}
